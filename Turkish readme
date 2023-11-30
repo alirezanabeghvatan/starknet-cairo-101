@@ -1,0 +1,129 @@
+# SORUMLULUK REDDİ
+Merhaba Starknet topluluğu,
+Bu veri deposu en son Kahire sözdizimi ile **güncellenmemiştir** ve bu nedenle bugünden itibaren bu eğitime başlamanızı önermiyoruz. Eğiticiyi güncellemek için depoya katkıda bulunmak istiyorsanız, lütfen bir görev almak için aşağıdaki soruna yorum yapın.
+Sorunla ilgili daha fazla ayrıntıyı ve alıştırma dökümünü burada bulabilirsiniz:
+https://github.com/starknet-edu/starknet-cairo-101/issues/61
+
+Ayrıca sizi doğru görevlerde etiketlemek için Telegram'da bana(@gyanlakshmi) veya Omar(@omarespejel)'a ping atabilirsiniz.
+
+# Starknet Kahire 101 Otomatik Atölye
+![banner](assets/banner.png)
+
+Basitleştirilmiş Çince sürümünü burada bulabilirsiniz.
+İspanyolca versiyonu burada mevcuttur.
+(güncellenmedi) Portekizce versiyonu burada mevcuttur.
+(güncellenmedi) Korece versiyonu burada mevcuttur.
+Hoş geldin!
+
+Bu eğitim, Kahire 1 kodunu ve Starknet akıllı sözleşmelerini nasıl okuyacağını öğrenmek isteyen geliştiriciler için hazırlanmıştır. Bunu takip ederek kısa sürede başlayabilirsiniz. İyi eğlenceler!
+
+Giriş​
+Ethereum ana ağının üstünde genel amaçlı bir Geçerlilik Toplaması olan Starknet'e hoş geldiniz. Starknet, geliştiricilerin güvenlik, ölçeklenebilirlik ve merkezi olmayan uygulamalardan ödün vermeden merkezi olmayan uygulamalar oluşturmasına olanak tanıyan bir katman 2 ölçeklendirme çözümüdür.
+
+Bu atölye, Kahire 1 kodunu ve Starknet akıllı sözleşmelerini okumanıza ve bunların sözdizimini anlamanıza yardımcı olmak için tasarlanmıştır. Merak etmeyin, takip etmek ve tamamlamak için makinenize herhangi bir şey kodlamanıza veya yüklemenize gerek yok. Hepsini tarayıcınızdan yapabilirsiniz.
+
+Tatbikatlar, test ağında Starknet Alpha'ya yerleştirilen bir dizi akıllı sözleşmeden oluşuyor. Her akıllı sözleşme, Kahire Akıllı sözleşme dilinin bir özelliğini özetleyen bir alıştırma/bulmacadır.
+
+Egzersizleri tamamlamak size ERC20 jetonu şeklinde puanlar kazandıracaktır. Tokenın herhangi bir parasal değeri yoktur ancak öğrenme sürecinizi takip etmenin eğlenceli bir yoludur.
+
+Bu atölyeye katılırken eğleneceğinizi umuyoruz!
+
+Ne öğreneceksin
+Kahire 1 kodu nasıl okunur
+Starknet akıllı sözleşmeleri nasıl okunur
+Bir tarayıcı cüzdanı ve bir blok gezgini kullanarak Starknet akıllı sözleşmeleriyle nasıl etkileşime geçilir?
+Sorumluluk reddi beyanı
+​Bunu kullanmanın, Ethereum ana ağındaki ilk genel amaçlı Geçerlilik Toplaması olan Starknet hakkında harika şeyler öğrenmek dışında herhangi bir fayda beklemeyin.
+
+Adımlar
+​
+
+![Steps](assets/steps.png)
+
+1. Akıllı sözleşme cüzdanı oluşturmak ve bunu Blok Gezginine bağlamak
+Öğreticiyi tamamlamak için puan toplamanız gerekir. Bu puanlara Starknet cüzdanınız aracılığıyla sahip olacaksınız.
+
+Bir tane kurmanın en kolay yolu Argent X'i (krom uzantısını indirin veya depolarını kontrol edin) veya Braavos'u (krom uzantısını indirin) kullanmaktır. Ethereum için Metamask ne ise, Starknet için de bu cüzdan çözümleri odur. Kullanıcıların Starknet'teki işlemleri başlatmasına ve uygulamalarla etkileşime girmesine olanak tanır.
+Uzantıyı yüklemek için cüzdan uygulamanızdaki talimatları izleyin. Hesabın devreye alınması yaklaşık 5 dakika sürebilir. Starknet'te yalnızca tek tür hesap bulunduğunu unutmayın: akıllı sözleşme hesapları. Yeni bir cüzdan oluşturmak için akıllı sözleşme cüzdanınızı ağa yayınlayan bir işlem göndermeniz gerekir.
+Goerli test ağı ağında olduğunuzdan emin olun.
+Eğitimin puanları 0x044f65adbdb59bf1db71e8b69efb7c9d0b810db94c1730a05fa5751b02d396de (Starkscan bağlantısı, Voyager bağlantısı) sözleşmesinde tutulur. Yüklü cüzdanınızda "Token Ekle"ye tıklayın ve puan bakiyenizin orada görünmesi için eğitim sözleşmesi adresini ekleyin. Cüzdanınızda SC101 (starknet-cairo-101) adlı yeni bir token görünecek.
+Goerli Starknet test ağında işlem gerçekleştirmek için gaz ödemesi yapmak üzere test ağı ETH'ye ihtiyacınız olacak. İki seçeneğiniz var:
+Musluğa gidin ve talimatları izleyin. Birkaç dakika sürebilir
+Starkgate'e gidin ve Goerli Eth'i Ethereum'dan Starknet'e bağlayın
+2. Sözleşmelerle etkileşim kurmak için Blok Gezgini kullanın
+Bu atölyeyi bitirmek için bir blok gezgini aracılığıyla alıştırmalar/akıllı sözleşmelerle etkileşime girmelisiniz.
+
+Starkscan veya Voyager'ı kullanabilirsiniz. Bunlar, Ethereum için Etherscan ne ise Starknet için de odur. Blok zincirinin durumuna göz atmanıza ve tüm işlemleri ve durumlarını görüntülemenize olanak tanır.
+
+Cüzdanınızı blok gezginine bağlayarak işlemlerinizi ağa gönderebilecek ve eğitimdeki alıştırmalarla etkileşime geçebileceksiniz.
+
+Bir sözleşme/işlem ararken daima Blok Gezgini'nin Goerli sürümünü kullandığınızdan emin olun. Alıştırmaları çözmek için gezgindeki okuma/yazma sekmesini kullanarak sözleşmenin işlevlerine erişin.​
+
+3. Egzersizleri çözmek ve puan kazanmak
+Her egzersiz ayrı bir akıllı sözleşmedir. Doğru şekilde çalıştırıldığında puanları adresinize dağıtacak kodu içerir.
+
+Bir alıştırmayı çözmek için aşağıdaki bağlantıyı takip ederek kodunu okuyun. Yorumları okuyun ve kodu anlamak için talimatları izleyin. Amacınız her alıştırmanın size ERC20 puanı gönderecek olan distribut_points() fonksiyonunu başarıyla çağırmasını sağlamaktır.
+
+Doğrulama sırasında alıştırmalar genellikle validate_exercise() işlevini de çağırır; bu, bir alıştırmayı tamamladığınızı kaydeder ve çeşitli zamanlarda puan toplamanızı engeller.
+
+Her alıştırma Goerli test ağına dağıtılır ve onlarla bir Blok Gezgini aracılığıyla etkileşim kurmanız gerekir. Sözleşmelerin adreslerini aşağıdaki tabloda bulabilirsiniz.
+
+| Topic                                 | Contract code                                         | Contract on Starkscan                                                                                              | Contract on Voyager                                                                                              |
+| ------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| General syntax                        | [Ex01](src/ex01.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x031d1866cb827c4e27bbca9ffee59fa2158b679413ffb58c3f90af56e1140e85) | [Link](https://goerli.voyager.online/contract/0x031d1866cb827c4e27bbca9ffee59fa2158b679413ffb58c3f90af56e1140e85) |
+| Storage variables, getters, asserts   | [Ex02](src/ex02.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x0600f8fe0752e598b4e6b27839f00ad65215d129f385e12931323c487b6f9b36) | [Link](https://goerli.voyager.online/contract/0x0600f8fe0752e598b4e6b27839f00ad65215d129f385e12931323c487b6f9b36) |
+| Reading and writing storage variables | [Ex03](src/ex03.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x033d5fc40c0e262612528a9a652ada70be854d98241fb7548745262b5273c9d1) | [Link](https://goerli.voyager.online/contract/0x033d5fc40c0e262612528a9a652ada70be854d98241fb7548745262b5273c9d1) |
+| Mappings                              | [Ex04](src/ex04.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x06967cd33c6e064087123958e239c98f0de5e6d663660fa16a2526e8b115688a) | [Link](https://goerli.voyager.online/contract/0x06967cd33c6e064087123958e239c98f0de5e6d663660fa16a2526e8b115688a) |
+| Variable visibility                   | [Ex05](src/ex05.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x076c32e000f7112724bba3c5f51fb1290217a1010ae555e6ecbdb2bfe6613e33) | [Link](https://goerli.voyager.online/contract/0x076c32e000f7112724bba3c5f51fb1290217a1010ae555e6ecbdb2bfe6613e33) |
+| Functions visibility                  | [Ex06](src/ex06.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x060987aea322cd12657588b6cdb0892db79322ab4533f7d74838ff2e2614a015) | [Link](https://goerli.voyager.online/contract/0x060987aea322cd12657588b6cdb0892db79322ab4533f7d74838ff2e2614a015) |
+| Comparing values                      | [Ex07](src/ex07.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x006051096480f375894eebb99948bce14a84c25093636c4b4e8222cc32a67cf0) | [Link](https://goerli.voyager.online/contract/0x006051096480f375894eebb99948bce14a84c25093636c4b4e8222cc32a67cf0) |
+| Recursions level 1                    | [Ex08](src/ex08.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x01ec8e981b1b6a7256a71f21790dd07cafeb15d02c18534a2bd4a6c8551860aa) | [Link](https://goerli.voyager.online/contract/0x01ec8e981b1b6a7256a71f21790dd07cafeb15d02c18534a2bd4a6c8551860aa) |
+| Recursions level 2                    | [Ex09](src/ex09.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x053b96c4ee027c53ea001479f24c10b543063e3c26d037c600e5bd31f0b21e5c) | [Link](https://goerli.voyager.online/contract/0x053b96c4ee027c53ea001479f24c10b543063e3c26d037c600e5bd31f0b21e5c) |
+| Composability                         | [Ex10](src/ex10.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x0763e89551900eba82d757a9f3862935cc7f7e47538f01ddba514f23d9a5f6e0) | [Link](https://goerli.voyager.online/contract/0x0763e89551900eba82d757a9f3862935cc7f7e47538f01ddba514f23d9a5f6e0) |
+| Importing functions                   | [Ex11](src/ex11.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x029a9a484d22a6353eff0d60ea56c6ffabaaac5e4889182287ef1d261578b197) | [Link](https://goerli.voyager.online/contract/0x029a9a484d22a6353eff0d60ea56c6ffabaaac5e4889182287ef1d261578b197) |
+| Events                                | [Ex12](src/ex12.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x04a221a8e3155fb03d1708881213a2ecdb05a41cf0ae6de83ddcf8f12bb04282) | [Link](https://goerli.voyager.online/contract/0x04a221a8e3155fb03d1708881213a2ecdb05a41cf0ae6de83ddcf8f12bb04282) |
+| Privacy on Starknet                   | [Ex13](src/ex13.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x067ed1d23c5cc3a34fb86edd4f8415250c79a374e87bcf2e6870321261ca9b0f) | [Link](https://goerli.voyager.online/contract/0x067ed1d23c5cc3a34fb86edd4f8415250c79a374e87bcf2e6870321261ca9b0f) |
+| Multicall                             | [Ex14](src/ex14.cairo)                          | [Link](https://testnet.starkscan.co/contract/0x031e9a701a24c1d2ecd576208087dfa52f1025072cf11e54407300f64f95ce5f) | [Link](https://goerli.voyager.online/contract/0x031e9a701a24c1d2ecd576208087dfa52f1025072cf11e54407300f64f95ce5f) |
+
+
+4. Puanlarınızı saymak ve ilerlemenizi kontrol etmek
+Puanlarınız cüzdanınıza aktarılacaktır ancak bu biraz zaman alabilir. Puan sayınızı gerçek zamanlı olarak izlemek istiyorsanız bakiyenizi blok gezgininden de kontrol edebilirsiniz!
+
+Voyager veya Starkscan'deki "sözleşmeyi oku" sekmesindeki ERC20 sayacına gidin.
+BalanceOf fonksiyonuna adresinizi girin.​
+Atölyenin tadını çıkarın! Herhangi bir sorunuz varsa Discord üzerinden bizimle iletişime geçmekten çekinmeyin. Size yardımcı olmaktan mutluluk duyarız!
+
+Bu çalıştayın geliştirilmesine katkıda bulunmak
+Bu proje daha iyi hale getirilebilir ve gelişecektir. Katkılarınızı bekliyoruz! Ortamınızı nasıl kuracağınız ve projeye nasıl katkıda bulunacağınız hakkında daha fazla bilgi için KATKIDA BULUNMA dosyasına gidin.
+
+Yardım etmek için yapabileceğiniz bazı şeyler şunlardır:
+
+Dilinize çeviri içeren bir şube oluşturun
+Bazı bulursanız hataları düzeltin
+Daha fazla açıklamaya ihtiyaç duyduğunu düşünüyorsanız alıştırmanın yorumlarına bir açıklama ekleyin
+En sevdiğiniz Kahire özelliğini gösteren alıştırmalar ekleyin
+Seriye yeni bir eğitim ekleyin
+Diğer Otomatik Atölyeler
+Bu atölye Starknet'te nasıl geliştirme yapılacağını öğretmeyi amaçlayan bir serinin ilkidir. Serideki diğer atölyelere göz atın:
+
+
+
+| Topic                                       | GitHub repo                                                                            |
+| ------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Learn how to read Cairo code (you are here) | [Cairo 101](https://github.com/starknet-edu/starknet-cairo-101)                        |
+| Deploy and customize an ERC721 NFT          | [Starknet ERC721](https://github.com/starknet-edu/starknet-erc721)                     |
+| Deploy and customize an ERC20 token         | [Starknet ERC20](https://github.com/starknet-edu/starknet-erc20)                       |
+| Build a cross-layer application             | [Starknet messaging bridge](https://github.com/starknet-edu/starknet-messaging-bridge) |
+| Debug your Cairo contracts easily           | [Starknet debug](https://github.com/starknet-edu/starknet-debug)                       |
+| Design your own account contract            | [Starknet account abstraction](https://github.com/starknet-edu/starknet-accounts)      |
+
+Bu eğitim üzerinde çalışmayı tamamladığınızda geri bildiriminiz çok takdir edilecektir!
+
+**Daha iyi hale getirmek için neler yapabileceğimizi bize bildirmek için lütfen [bu formu](https://forms.reform.app/starkware/untitled-form-4/kaes2e) doldurun.**
+
+​
+İlerlemek için çabalarsanız bize bildirin! Bu atölyenin mümkün olduğu kadar erişilebilir olması amaçlanıyor; durumun böyle olup olmadığını görmek istiyoruz.
+​
+Bir sorunuz var mı? [Discord sunucumuza](https://starknet.io/discord) katılın, kaydolun ve #tutorials-support kanalına katılın.
+
+Starknet'te geliştirmeyle ilgili çevrimiçi atölye çalışmalarına katılmak ister misiniz? [Buradan abone olun](https://starknet.substack.com/)
